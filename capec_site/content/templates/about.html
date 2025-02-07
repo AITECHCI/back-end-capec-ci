@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}À Propos - CAPEC{% endblock %}
+
+{% block content %}
+    <h1>À Propos de la CAPEC</h1>
+    <h2>Historique</h2>
+    <p>{{ about_page.history }}</p>
+    <h2>Équipe</h2>
+    <p>{{ about_page.team }}</p>
+    <h2>Valeurs et Objectifs</h2>
+    <p>{{ about_page.values }}</p>
+{% endblock %}

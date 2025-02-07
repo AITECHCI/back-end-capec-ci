@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Études et Recherches - CAPEC{% endblock %}
+
+{% block content %}
+    <h1>Études et Recherches</h1>
+    <h2>Thèmes de Recherche</h2>
+    <ul>
+        {% for theme in research.themes.all %}
+            <li>{{ theme.title }} : {{ theme.description }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Études Commanditées</h2>
+    <p>{{ research.sponsored_studies }}</p>
+    <h2>Méthodes de Recherche</h2>
+    <p>{{ research.research_methods }}</p>
+{% endblock %}  <!-- Fermeture du bloc content -->
