@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),  # Vue principale
+     path('admin/content/mymodel/create/', views.create_object, name='create_object'),
     path('about/', views.about, name='about'),  # Page À propos
     path('research/', views.research, name='research'),  # Page Recherche
     path('publications/', views.publications, name='publications'),  # Page Publications

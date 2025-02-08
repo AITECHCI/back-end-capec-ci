@@ -1,5 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.urls import reverse
+from .forms import MyModelForm  # Remplacez par votre formulaire
 from .models import HomePage, AboutPage, Research, Publication, Activity, TrainingProgram, Media, Contact, FAQ
+
+def create_object(request):
+    if request.method == 'POST':
+        form = MyModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Objet créé avec succès !')
+            return redirect(reverse('admin:content_mymodel_changelist'))  # Redirige vers la liste des objets dans l'admin
+    else:
+        form = MyModelForm()
+    
+    return render(request, 'admin/content/mymodel/create.html', {'form': form})
 
 def home(request):
     home_page = HomePage.objects.first()

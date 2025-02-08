@@ -51,3 +51,8 @@ class Contact(models.Model):
 class FAQ(models.Model):
     question = models.CharField(max_length=255)
     answer = models.TextField()
+    
+class MyModel(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    # Ajoutez d'autres champs si nécessaire
