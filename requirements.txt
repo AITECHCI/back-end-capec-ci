@@ -1,8 +1,0 @@
-Django==5.1.4
-djangorestframework==3.14.0  # Si vous utilisez Django REST Framework
-psycopg2-binary==2.9.10  # Pour PostgreSQL, si nécessaire
-mysqlclient==2.1.0  # Pour MySQL, si nécessaire
-gunicorn==20.1.0  # Serveur WSGI pour la production
-whitenoise==5.3.0  # Pour servir des fichiers statiques en production
-django-environ==0.8.1  # Pour gérer les variables d'environnement
-Pillow==11.1.0  # Pour le traitement des images
